@@ -1,0 +1,183 @@
+
+<form id="1994617208">
+<property name="name" value="TTS_Connected_Claims.TTS_CC_Master_BPD-taskform.form"/>
+<property name="displayMode" value="default"/>
+<property name="status" value="0"/>
+<field position="0" name="incidentDetails_ambulanceServices" bag-type="com.myteam.tts_connected_claims.serviceOffering" type="MultipleSubform" id="262232378">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;ambulanceServices (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/ambulanceServices"/>
+<property name="fieldClass" value="java.util.List"/>
+</field>
+<field position="1" name="incidentDetails_carHireServices" type="Subform" id="311768408">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;carHireServices (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/carHireServices"/>
+<property name="fieldClass" value="java.lang.Object"/>
+</field>
+<field position="2" name="incidentDetails_caseSubType" type="InputText" id="900607671">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;caseSubType (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/caseSubType"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="3" name="incidentDetails_caseType" type="InputText" id="96340098">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;caseType (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/caseType"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="4" name="incidentDetails_claimNumber" type="InputText" id="326949477">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;claimNumber (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/claimNumber"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="5" name="incidentDetails_customerDetails" type="Subform" id="1564430116">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;customerDetails (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/customerDetails"/>
+<property name="fieldClass" value="java.lang.Object"/>
+</field>
+<field position="6" name="incidentDetails_description" type="InputText" id="942896791">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;description (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/description"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="7" name="incidentDetails_drivable" type="InputText" id="672396516">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;drivable (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/drivable"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="8" name="incidentDetails_incidentDriver" type="InputText" id="1651805916">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;incidentDriver (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/incidentDriver"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="9" name="incidentDetails_incidentDriverOther" type="InputText" id="682185569">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;incidentDriverOther (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/incidentDriverOther"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="10" name="incidentDetails_incidentId" type="InputText" id="231360817">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;incidentId (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/incidentId"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="11" name="incidentDetails_incidentTime" type="InputDate" id="2069122181">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;incidentTime (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/incidentTime"/>
+<property name="fieldClass" value="java.util.Date"/>
+</field>
+<field position="12" name="incidentDetails_incidentType" type="InputText" id="2012127259">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;incidentType (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/incidentType"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="13" name="incidentDetails_location" type="InputText" id="52460341">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;location (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/location"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="14" name="incidentDetails_passengerCount" type="InputTextInteger" id="1186696879">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;passengerCount (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/passengerCount"/>
+<property name="fieldClass" value="java.lang.Integer"/>
+</field>
+<field position="15" name="incidentDetails_policyDetails" type="Subform" id="1132209508">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;policyDetails (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/policyDetails"/>
+<property name="fieldClass" value="java.lang.Object"/>
+</field>
+<field position="16" name="incidentDetails_riskItem" type="InputText" id="1913038330">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;riskItem (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/riskItem"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="17" name="incidentDetails_roadsideAssistServices" bag-type="com.myteam.tts_connected_claims.serviceOffering" type="MultipleSubform" id="17786571">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;roadsideAssistServices (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/roadsideAssistServices"/>
+<property name="fieldClass" value="java.util.List"/>
+</field>
+<field position="18" name="incidentDetails_speakingTo" type="InputText" id="1199368496">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;speakingTo (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/speakingTo"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="19" name="incidentDetails_speakingToOther" type="InputText" id="1175704475">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;speakingToOther (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/speakingToOther"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="20" name="incidentDetails_taxiServices" bag-type="com.myteam.tts_connected_claims.serviceOffering" type="MultipleSubform" id="768826501">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;taxiServices (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/taxiServices"/>
+<property name="fieldClass" value="java.util.List"/>
+</field>
+<field position="21" name="incidentDetails_towingServices" bag-type="com.myteam.tts_connected_claims.serviceOffering" type="MultipleSubform" id="739973306">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;towingServices (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/towingServices"/>
+<property name="fieldClass" value="java.util.List"/>
+</field>
+<field position="22" name="incidentDetails_triggerSource" type="InputText" id="1006615033">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;triggerSource (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/triggerSource"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="23" name="incidentDetails_vehicleDetails" type="Subform" id="774632818">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;vehicleDetails (incidentDetails)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentDetails/vehicleDetails"/>
+<property name="fieldClass" value="java.lang.Object"/>
+</field>
+<field position="24" name="incidentIdIncrementer" type="InputText" id="871933177">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;incidentIdIncrementer (incidentIdIncrementer)quot;"/>
+<property name="readonly" value="false"/>
+<property name="outputBinding" value="incidentIdIncrementer"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<dataHolder inputId="" name="#E9E371" type="dataModelerEntry" outId="incidentDetails" value="com.myteam.tts_connected_claims.incidentDetails" id="incidentDetails"/>
+<dataHolder inputId="" name="#BBBBBB" type="basicType" outId="incidentIdIncrementer" value="java.lang.String" id="incidentIdIncrementer"/>
+</form>
