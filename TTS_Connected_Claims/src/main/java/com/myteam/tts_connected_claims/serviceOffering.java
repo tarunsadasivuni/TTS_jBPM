@@ -9,17 +9,23 @@ public class serviceOffering implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "serviceName")
+	@org.kie.api.definition.type.Label("serviceName")
 	private java.lang.String serviceName;
 
-	@org.kie.api.definition.type.Label(value = "serviceStatus")
+	@org.kie.api.definition.type.Label("serviceStatus")
 	private java.lang.String serviceStatus;
 
-	@org.kie.api.definition.type.Label(value = "requestTime")
-	private java.util.Date requestTime;
+	@org.kie.api.definition.type.Label("progress")
+	private java.lang.String progress;
 
-	@org.kie.api.definition.type.Label(value = "serviceType")
+	@org.kie.api.definition.type.Label("color")
+	private java.lang.String color;
+
+	@org.kie.api.definition.type.Label("serviceType")
 	private java.lang.String serviceType;
+
+	@org.kie.api.definition.type.Label(value = "eligible")
+	private java.lang.Boolean eligible;
 
 	public serviceOffering() {
 	}
@@ -40,12 +46,20 @@ public class serviceOffering implements java.io.Serializable {
 		this.serviceStatus = serviceStatus;
 	}
 
-	public java.util.Date getRequestTime() {
-		return this.requestTime;
+	public java.lang.String getProgress() {
+		return this.progress;
 	}
 
-	public void setRequestTime(java.util.Date requestTime) {
-		this.requestTime = requestTime;
+	public void setProgress(java.lang.String progress) {
+		this.progress = progress;
+	}
+
+	public java.lang.String getColor() {
+		return this.color;
+	}
+
+	public void setColor(java.lang.String color) {
+		this.color = color;
 	}
 
 	public java.lang.String getServiceType() {
@@ -56,13 +70,24 @@ public class serviceOffering implements java.io.Serializable {
 		this.serviceType = serviceType;
 	}
 
+	public java.lang.Boolean getEligible() {
+		return this.eligible;
+	}
+
+	public void setEligible(java.lang.Boolean eligible) {
+		this.eligible = eligible;
+	}
+
 	public serviceOffering(java.lang.String serviceName,
-			java.lang.String serviceStatus, java.util.Date requestTime,
-			java.lang.String serviceType) {
+			java.lang.String serviceStatus, java.lang.String progress,
+			java.lang.String color, java.lang.String serviceType,
+			java.lang.Boolean eligible) {
 		this.serviceName = serviceName;
 		this.serviceStatus = serviceStatus;
-		this.requestTime = requestTime;
+		this.progress = progress;
+		this.color = color;
 		this.serviceType = serviceType;
+		this.eligible = eligible;
 	}
 
 }

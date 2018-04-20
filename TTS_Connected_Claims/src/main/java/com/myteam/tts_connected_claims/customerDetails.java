@@ -31,8 +31,11 @@ public class customerDetails implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("customerInitials")
 	private java.lang.String customerInitials;
 
-	@org.kie.api.definition.type.Label(value = "dateOfBirth")
-	private java.util.Date dateOfBirth;
+	@org.kie.api.definition.type.Label("dateOfBirth")
+	private String dateOfBirth;
+
+	@org.kie.api.definition.type.Label(value = "contactNumber")
+	private java.lang.String contactNumber;
 
 	public customerDetails() {
 	}
@@ -93,12 +96,20 @@ public class customerDetails implements java.io.Serializable {
 		this.customerInitials = customerInitials;
 	}
 
-	public java.util.Date getDateOfBirth() {
+	public java.lang.String getDateOfBirth() {
 		return this.dateOfBirth;
 	}
 
-	public void setDateOfBirth(java.util.Date dateOfBirth) {
+	public void setDateOfBirth(java.lang.String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
+	}
+
+	public java.lang.String getContactNumber() {
+		return this.contactNumber;
+	}
+
+	public void setContactNumber(java.lang.String contactNumber) {
+		this.contactNumber = contactNumber;
 	}
 
 	public customerDetails(java.lang.String id, java.lang.String contactType,
@@ -106,7 +117,8 @@ public class customerDetails implements java.io.Serializable {
 			com.myteam.tts_connected_claims.address address,
 			java.lang.String customerFirstName,
 			java.lang.String customerSurName,
-			java.lang.String customerInitials, java.util.Date dateOfBirth) {
+			java.lang.String customerInitials, java.lang.String dateOfBirth,
+			java.lang.String contactNumber) {
 		this.id = id;
 		this.contactType = contactType;
 		this.email = email;
@@ -115,6 +127,7 @@ public class customerDetails implements java.io.Serializable {
 		this.customerSurName = customerSurName;
 		this.customerInitials = customerInitials;
 		this.dateOfBirth = dateOfBirth;
+		this.contactNumber = contactNumber;
 	}
 
 }

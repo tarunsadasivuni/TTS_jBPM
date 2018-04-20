@@ -10,7 +10,7 @@ public class incidentDetails implements java.io.Serializable {
 	static final long serialVersionUID = 1L;
 
 	@org.kie.api.definition.type.Label("incidentTime")
-	private java.util.Date incidentTime;
+	private String incidentTime;
 
 	@org.kie.api.definition.type.Label("location")
 	private java.lang.String location;
@@ -59,19 +59,19 @@ public class incidentDetails implements java.io.Serializable {
 
 	@org.kie.api.definition.type.Label("ambulanceServices")
 	@javax.persistence.OneToMany(cascade = {javax.persistence.CascadeType.ALL}, fetch = javax.persistence.FetchType.EAGER)
-	private java.util.List<com.myteam.tts_connected_claims.serviceOffering> ambulanceServices;
+	private com.myteam.tts_connected_claims.serviceOffering ambulanceServices;
 
 	@javax.persistence.OneToMany(cascade = {javax.persistence.CascadeType.ALL}, fetch = javax.persistence.FetchType.EAGER)
 	@org.kie.api.definition.type.Label("towingServices")
-	private java.util.List<com.myteam.tts_connected_claims.serviceOffering> towingServices;
+	private com.myteam.tts_connected_claims.serviceOffering towingServices;
 
 	@javax.persistence.OneToMany(cascade = {javax.persistence.CascadeType.ALL}, fetch = javax.persistence.FetchType.EAGER)
 	@org.kie.api.definition.type.Label("roadsideAssistServices")
-	private java.util.List<com.myteam.tts_connected_claims.serviceOffering> roadsideAssistServices;
+	private com.myteam.tts_connected_claims.serviceOffering roadsideAssistServices;
 
 	@javax.persistence.OneToMany(cascade = {javax.persistence.CascadeType.ALL}, fetch = javax.persistence.FetchType.EAGER)
 	@org.kie.api.definition.type.Label("taxiServices")
-	private java.util.List<com.myteam.tts_connected_claims.serviceOffering> taxiServices;
+	private com.myteam.tts_connected_claims.serviceOffering taxiServices;
 
 	@javax.persistence.ManyToOne(cascade = {javax.persistence.CascadeType.ALL}, fetch = javax.persistence.FetchType.EAGER)
 	@org.kie.api.definition.type.Label("carHireServices")
@@ -109,24 +109,61 @@ public class incidentDetails implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("owner")
 	private java.lang.String owner;
 
-	@org.kie.api.definition.type.Label(value = "processId")
+	@org.kie.api.definition.type.Label("processId")
 	private java.lang.String processId;
 
-	@org.kie.api.definition.type.Label(value = "containerId")
+	@org.kie.api.definition.type.Label("containerId")
 	private java.lang.String containerId;
 
-	@org.kie.api.definition.type.Label(value = "processInstanceId")
+	@org.kie.api.definition.type.Label("processInstanceId")
 	private java.lang.Long processInstanceId;
 
+	@org.kie.api.definition.type.Label("caseStatus")
+	private java.lang.String caseStatus;
+
+	@org.kie.api.definition.type.Label("medicalService")
+	private java.lang.String medicalService;
+
+	@javax.persistence.OneToMany(cascade = {javax.persistence.CascadeType.ALL}, fetch = javax.persistence.FetchType.EAGER)
+	@org.kie.api.definition.type.Label("thirdPartyDetails")
+	private java.util.List<com.myteam.tts_connected_claims.thirdPartyDetails> thirdPartyDetails;
+
+	@org.kie.api.definition.type.Label("group")
+	private java.lang.String group;
+
+	@org.kie.api.definition.type.Label("enableIncidentServices")
+	private java.lang.Boolean enableIncidentServices;
+
+	@javax.persistence.ManyToOne(cascade = {javax.persistence.CascadeType.ALL}, fetch = javax.persistence.FetchType.EAGER)
+	@org.kie.api.definition.type.Label("vehicleInnerDamage")
+	private com.myteam.tts_connected_claims.vehicleInnerDamage vehicleInnerDamage;
+
+	@org.kie.api.definition.type.Label("drivableUpdateReason")
+	private java.lang.String drivableUpdateReason;
+
+	@javax.persistence.ManyToOne(cascade = {javax.persistence.CascadeType.ALL}, fetch = javax.persistence.FetchType.EAGER)
+	@org.kie.api.definition.type.Label("vehicleOuterDamage")
+	private com.myteam.tts_connected_claims.vehicleOuterDamage vehicleOuterDamage;
+
+	@org.kie.api.definition.type.Label("caseTime")
+	private java.lang.String caseTime;
+
+	@org.kie.api.definition.type.Label("agentName")
+	private java.lang.String agentName;
+
+	@org.kie.api.definition.type.Label("drivableReasonOther")
+	private java.lang.String drivableReasonOther;
+
+	@org.kie.api.definition.type.Label("incidentDriverAssociation")
+	private java.lang.String incidentDriverAssociation;
+
+	@org.kie.api.definition.type.Label("riskitemSequenceNo")
+	private java.lang.String riskitemSequenceNo;
+
+	@org.kie.api.definition.type.Label(value = "speakingToDisplayValue")
+	private java.lang.String speakingToDisplayValue;
+
 	public incidentDetails() {
-	}
-
-	public java.util.Date getIncidentTime() {
-		return this.incidentTime;
-	}
-
-	public void setIncidentTime(java.util.Date incidentTime) {
-		this.incidentTime = incidentTime;
 	}
 
 	public java.lang.String getLocation() {
@@ -244,39 +281,39 @@ public class incidentDetails implements java.io.Serializable {
 		this.drivable = drivable;
 	}
 
-	public java.util.List<com.myteam.tts_connected_claims.serviceOffering> getAmbulanceServices() {
+	public com.myteam.tts_connected_claims.serviceOffering getAmbulanceServices() {
 		return this.ambulanceServices;
 	}
 
 	public void setAmbulanceServices(
-			java.util.List<com.myteam.tts_connected_claims.serviceOffering> ambulanceServices) {
+			com.myteam.tts_connected_claims.serviceOffering ambulanceServices) {
 		this.ambulanceServices = ambulanceServices;
 	}
 
-	public java.util.List<com.myteam.tts_connected_claims.serviceOffering> getTowingServices() {
+	public com.myteam.tts_connected_claims.serviceOffering getTowingServices() {
 		return this.towingServices;
 	}
 
 	public void setTowingServices(
-			java.util.List<com.myteam.tts_connected_claims.serviceOffering> towingServices) {
+			com.myteam.tts_connected_claims.serviceOffering towingServices) {
 		this.towingServices = towingServices;
 	}
 
-	public java.util.List<com.myteam.tts_connected_claims.serviceOffering> getRoadsideAssistServices() {
+	public com.myteam.tts_connected_claims.serviceOffering getRoadsideAssistServices() {
 		return this.roadsideAssistServices;
 	}
 
 	public void setRoadsideAssistServices(
-			java.util.List<com.myteam.tts_connected_claims.serviceOffering> roadsideAssistServices) {
+			com.myteam.tts_connected_claims.serviceOffering roadsideAssistServices) {
 		this.roadsideAssistServices = roadsideAssistServices;
 	}
 
-	public java.util.List<com.myteam.tts_connected_claims.serviceOffering> getTaxiServices() {
+	public com.myteam.tts_connected_claims.serviceOffering getTaxiServices() {
 		return this.taxiServices;
 	}
 
 	public void setTaxiServices(
-			java.util.List<com.myteam.tts_connected_claims.serviceOffering> taxiServices) {
+			com.myteam.tts_connected_claims.serviceOffering taxiServices) {
 		this.taxiServices = taxiServices;
 	}
 
@@ -373,7 +410,6 @@ public class incidentDetails implements java.io.Serializable {
 	}
 
 	public incidentDetails(
-			java.util.Date incidentTime,
 			java.lang.String location,
 			java.lang.String description,
 			java.lang.String triggerSource,
@@ -387,11 +423,12 @@ public class incidentDetails implements java.io.Serializable {
 			com.myteam.tts_connected_claims.customerDetails customerDetails,
 			com.myteam.tts_connected_claims.policyDetails policyDetails,
 			com.myteam.tts_connected_claims.vehicleDetails vehicleDetails,
+			com.myteam.tts_connected_claims.vehicleInnerDamage vehicleInnerDamage,
 			java.lang.String incidentId,
-			java.util.List<com.myteam.tts_connected_claims.serviceOffering> ambulanceServices,
-			java.util.List<com.myteam.tts_connected_claims.serviceOffering> towingServices,
-			java.util.List<com.myteam.tts_connected_claims.serviceOffering> roadsideAssistServices,
-			java.util.List<com.myteam.tts_connected_claims.serviceOffering> taxiServices,
+			com.myteam.tts_connected_claims.serviceOffering ambulanceServices,
+			com.myteam.tts_connected_claims.serviceOffering towingServices,
+			com.myteam.tts_connected_claims.serviceOffering roadsideAssistServices,
+			com.myteam.tts_connected_claims.serviceOffering taxiServices,
 			com.myteam.tts_connected_claims.serviceOffering carHireServices,
 			java.lang.String incidentDriverOther,
 			java.lang.String speakingToOther,
@@ -416,6 +453,7 @@ public class incidentDetails implements java.io.Serializable {
 		this.customerDetails = customerDetails;
 		this.policyDetails = policyDetails;
 		this.vehicleDetails = vehicleDetails;
+		this.vehicleInnerDamage = vehicleInnerDamage;
 		this.incidentId = incidentId;
 		this.ambulanceServices = ambulanceServices;
 		this.towingServices = towingServices;
@@ -432,7 +470,7 @@ public class incidentDetails implements java.io.Serializable {
 		this.medicalDetails = medicalDetails;
 		this.creator = creator;
 		this.owner = owner;
-		
+
 	}
 
 	public java.lang.String getProcessId() {
@@ -459,8 +497,216 @@ public class incidentDetails implements java.io.Serializable {
 		this.processInstanceId = processInstanceId;
 	}
 
+	public java.lang.String getCaseStatus() {
+		return this.caseStatus;
+	}
+
+	public void setCaseStatus(java.lang.String caseStatus) {
+		this.caseStatus = caseStatus;
+	}
+
+	public java.lang.String getMedicalService() {
+		return this.medicalService;
+	}
+
+	public void setMedicalService(java.lang.String medicalService) {
+		this.medicalService = medicalService;
+	}
+
+	public java.lang.String getIncidentTime() {
+		return this.incidentTime;
+	}
+
+	public void setIncidentTime(java.lang.String incidentTime) {
+		this.incidentTime = incidentTime;
+	}
+
+	public java.util.List<com.myteam.tts_connected_claims.thirdPartyDetails> getThirdPartyDetails() {
+		return this.thirdPartyDetails;
+	}
+
+	public void setThirdPartyDetails(
+			java.util.List<com.myteam.tts_connected_claims.thirdPartyDetails> thirdPartyDetails) {
+		this.thirdPartyDetails = thirdPartyDetails;
+	}
+
+	public java.lang.String getGroup() {
+		return this.group;
+	}
+
+	public void setGroup(java.lang.String group) {
+		this.group = group;
+	}
+
+	public java.lang.Boolean getEnableIncidentServices() {
+		return this.enableIncidentServices;
+	}
+
+	public void setEnableIncidentServices(
+			java.lang.Boolean enableIncidentServices) {
+		this.enableIncidentServices = enableIncidentServices;
+	}
+
+	public com.myteam.tts_connected_claims.vehicleInnerDamage getVehicleInnerDamage() {
+		return this.vehicleInnerDamage;
+	}
+
+	public void setVehicleInnerDamage(
+			com.myteam.tts_connected_claims.vehicleInnerDamage vehicleInnerDamage) {
+		this.vehicleInnerDamage = vehicleInnerDamage;
+	}
+
+	public java.lang.String getDrivableUpdateReason() {
+		return this.drivableUpdateReason;
+	}
+
+	public void setDrivableUpdateReason(java.lang.String drivableUpdateReason) {
+		this.drivableUpdateReason = drivableUpdateReason;
+	}
+
 	public incidentDetails(
-			java.util.Date incidentTime,
+			java.lang.String incidentTime,
+			java.lang.String location,
+			java.lang.String description,
+			java.lang.String triggerSource,
+			java.lang.String incidentType,
+			java.lang.String riskItem,
+			java.lang.String drivable,
+			java.lang.String incidentDriver,
+			java.lang.String speakingTo,
+			java.lang.Integer passengerCount,
+			java.lang.String claimNumber,
+			com.myteam.tts_connected_claims.customerDetails customerDetails,
+			com.myteam.tts_connected_claims.policyDetails policyDetails,
+			com.myteam.tts_connected_claims.vehicleDetails vehicleDetails,
+			com.myteam.tts_connected_claims.vehicleInnerDamage vehicleInnerDamage,
+			java.lang.String incidentId,
+			com.myteam.tts_connected_claims.serviceOffering ambulanceServices,
+			com.myteam.tts_connected_claims.serviceOffering towingServices,
+			com.myteam.tts_connected_claims.serviceOffering roadsideAssistServices,
+			com.myteam.tts_connected_claims.serviceOffering taxiServices,
+			com.myteam.tts_connected_claims.serviceOffering carHireServices,
+			java.lang.String incidentDriverOther,
+			java.lang.String speakingToOther,
+			java.lang.String vehicleIncidentSubType,
+			java.lang.String vehicleIncidentType,
+			java.lang.String carHireEligibility,
+			com.myteam.tts_connected_claims.contactDetail primaryContactDetails,
+			java.util.List<com.myteam.tts_connected_claims.contactDetail> secondaryContactDetails,
+			java.lang.String medicalDetails,
+			java.lang.String creator,
+			java.lang.String owner,
+			java.lang.String processId,
+			java.lang.String containerId,
+			java.lang.Long processInstanceId,
+			java.lang.String caseStatus,
+			java.lang.String medicalService,
+			java.util.List<com.myteam.tts_connected_claims.thirdPartyDetails> thirdPartyDetails,
+			java.lang.String group, java.lang.Boolean enableIncidentServices,
+			java.lang.String drivableUpdateReason) {
+		this.incidentTime = incidentTime;
+		this.location = location;
+		this.description = description;
+		this.triggerSource = triggerSource;
+		this.incidentType = incidentType;
+		this.riskItem = riskItem;
+		this.drivable = drivable;
+		this.incidentDriver = incidentDriver;
+		this.speakingTo = speakingTo;
+		this.passengerCount = passengerCount;
+		this.claimNumber = claimNumber;
+		this.customerDetails = customerDetails;
+		this.policyDetails = policyDetails;
+		this.vehicleDetails = vehicleDetails;
+		this.vehicleInnerDamage = vehicleInnerDamage;
+		this.incidentId = incidentId;
+		this.ambulanceServices = ambulanceServices;
+		this.towingServices = towingServices;
+		this.roadsideAssistServices = roadsideAssistServices;
+		this.taxiServices = taxiServices;
+		this.carHireServices = carHireServices;
+		this.incidentDriverOther = incidentDriverOther;
+		this.speakingToOther = speakingToOther;
+		this.vehicleIncidentSubType = vehicleIncidentSubType;
+		this.vehicleIncidentType = vehicleIncidentType;
+		this.carHireEligibility = carHireEligibility;
+		this.primaryContactDetails = primaryContactDetails;
+		this.secondaryContactDetails = secondaryContactDetails;
+		this.medicalDetails = medicalDetails;
+		this.creator = creator;
+		this.owner = owner;
+		this.processId = processId;
+		this.containerId = containerId;
+		this.processInstanceId = processInstanceId;
+		this.caseStatus = caseStatus;
+		this.medicalService = medicalService;
+		this.thirdPartyDetails = thirdPartyDetails;
+		this.group = group;
+		this.enableIncidentServices = enableIncidentServices;
+		this.drivableUpdateReason = drivableUpdateReason;
+	}
+
+	public com.myteam.tts_connected_claims.vehicleOuterDamage getVehicleOuterDamage() {
+		return this.vehicleOuterDamage;
+	}
+
+	public void setVehicleOuterDamage(
+			com.myteam.tts_connected_claims.vehicleOuterDamage vehicleOuterDamage) {
+		this.vehicleOuterDamage = vehicleOuterDamage;
+	}
+
+	public java.lang.String getCaseTime() {
+		return this.caseTime;
+	}
+
+	public void setCaseTime(java.lang.String caseTime) {
+		this.caseTime = caseTime;
+	}
+
+	public java.lang.String getAgentName() {
+		return this.agentName;
+	}
+
+	public void setAgentName(java.lang.String agentName) {
+		this.agentName = agentName;
+	}
+
+	public java.lang.String getDrivableReasonOther() {
+		return this.drivableReasonOther;
+	}
+
+	public void setDrivableReasonOther(java.lang.String drivableReasonOther) {
+		this.drivableReasonOther = drivableReasonOther;
+	}
+
+	public java.lang.String getIncidentDriverAssociation() {
+		return this.incidentDriverAssociation;
+	}
+
+	public void setIncidentDriverAssociation(
+			java.lang.String incidentDriverAssociation) {
+		this.incidentDriverAssociation = incidentDriverAssociation;
+	}
+
+	public java.lang.String getRiskitemSequenceNo() {
+		return this.riskitemSequenceNo;
+	}
+
+	public void setRiskitemSequenceNo(java.lang.String riskitemSequenceNo) {
+		this.riskitemSequenceNo = riskitemSequenceNo;
+	}
+
+	public java.lang.String getSpeakingToDisplayValue() {
+		return this.speakingToDisplayValue;
+	}
+
+	public void setSpeakingToDisplayValue(
+			java.lang.String speakingToDisplayValue) {
+		this.speakingToDisplayValue = speakingToDisplayValue;
+	}
+
+	public incidentDetails(
+			java.lang.String incidentTime,
 			java.lang.String location,
 			java.lang.String description,
 			java.lang.String triggerSource,
@@ -475,10 +721,10 @@ public class incidentDetails implements java.io.Serializable {
 			com.myteam.tts_connected_claims.policyDetails policyDetails,
 			com.myteam.tts_connected_claims.vehicleDetails vehicleDetails,
 			java.lang.String incidentId,
-			java.util.List<com.myteam.tts_connected_claims.serviceOffering> ambulanceServices,
-			java.util.List<com.myteam.tts_connected_claims.serviceOffering> towingServices,
-			java.util.List<com.myteam.tts_connected_claims.serviceOffering> roadsideAssistServices,
-			java.util.List<com.myteam.tts_connected_claims.serviceOffering> taxiServices,
+			com.myteam.tts_connected_claims.serviceOffering ambulanceServices,
+			com.myteam.tts_connected_claims.serviceOffering towingServices,
+			com.myteam.tts_connected_claims.serviceOffering roadsideAssistServices,
+			com.myteam.tts_connected_claims.serviceOffering taxiServices,
 			com.myteam.tts_connected_claims.serviceOffering carHireServices,
 			java.lang.String incidentDriverOther,
 			java.lang.String speakingToOther,
@@ -487,9 +733,25 @@ public class incidentDetails implements java.io.Serializable {
 			java.lang.String carHireEligibility,
 			com.myteam.tts_connected_claims.contactDetail primaryContactDetails,
 			java.util.List<com.myteam.tts_connected_claims.contactDetail> secondaryContactDetails,
-			java.lang.String medicalDetails, java.lang.String creator,
-			java.lang.String owner, java.lang.String processId,
-			java.lang.String containerId, java.lang.Long processInstanceId) {
+			java.lang.String medicalDetails,
+			java.lang.String creator,
+			java.lang.String owner,
+			java.lang.String processId,
+			java.lang.String containerId,
+			java.lang.Long processInstanceId,
+			java.lang.String caseStatus,
+			java.lang.String medicalService,
+			java.util.List<com.myteam.tts_connected_claims.thirdPartyDetails> thirdPartyDetails,
+			java.lang.String group,
+			java.lang.Boolean enableIncidentServices,
+			com.myteam.tts_connected_claims.vehicleInnerDamage vehicleInnerDamage,
+			java.lang.String drivableUpdateReason,
+			com.myteam.tts_connected_claims.vehicleOuterDamage vehicleOuterDamage,
+			java.lang.String caseTime, java.lang.String agentName,
+			java.lang.String drivableReasonOther,
+			java.lang.String incidentDriverAssociation,
+			java.lang.String riskitemSequenceNo,
+			java.lang.String speakingToDisplayValue) {
 		this.incidentTime = incidentTime;
 		this.location = location;
 		this.description = description;
@@ -523,6 +785,20 @@ public class incidentDetails implements java.io.Serializable {
 		this.processId = processId;
 		this.containerId = containerId;
 		this.processInstanceId = processInstanceId;
+		this.caseStatus = caseStatus;
+		this.medicalService = medicalService;
+		this.thirdPartyDetails = thirdPartyDetails;
+		this.group = group;
+		this.enableIncidentServices = enableIncidentServices;
+		this.vehicleInnerDamage = vehicleInnerDamage;
+		this.drivableUpdateReason = drivableUpdateReason;
+		this.vehicleOuterDamage = vehicleOuterDamage;
+		this.caseTime = caseTime;
+		this.agentName = agentName;
+		this.drivableReasonOther = drivableReasonOther;
+		this.incidentDriverAssociation = incidentDriverAssociation;
+		this.riskitemSequenceNo = riskitemSequenceNo;
+		this.speakingToDisplayValue = speakingToDisplayValue;
 	}
 
 }

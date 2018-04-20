@@ -8,13 +8,26 @@
     <marshalling-strategies/>
     <event-listeners/>
     <task-event-listeners/>
-    <globals/>
+    <globals>
+        <global>
+            <resolver>mvel</resolver>
+            <identifier>"blN5c0FkbWluOk4zdXRyMW4wczEzNTc5"</identifier>
+            <parameters/>
+            <name>authorization</name>
+        </global>
+    </globals>
     <work-item-handlers>
         <work-item-handler>
             <resolver>mvel</resolver>
             <identifier>new org.jbpm.process.workitem.rest.RESTWorkItemHandler("nSysAdmin","N3utr1n0s13579")</identifier>
             <parameters/>
             <name>Rest</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new org.jbpm.bpmn2.handler.ReceiveTaskHandler(ksession)</identifier>
+            <parameters/>
+            <name>Receive Task</name>
         </work-item-handler>
     </work-item-handlers>
     <environment-entries/>

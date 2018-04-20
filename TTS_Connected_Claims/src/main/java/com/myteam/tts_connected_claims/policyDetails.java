@@ -28,12 +28,24 @@ public class policyDetails implements java.io.Serializable {
 	private java.lang.String policyHolderInitials;
 
 	@javax.persistence.OneToMany(cascade = {javax.persistence.CascadeType.ALL}, fetch = javax.persistence.FetchType.EAGER)
-	@org.kie.api.definition.type.Label(value = "members")
+	@org.kie.api.definition.type.Label("members")
 	private java.util.List<com.myteam.tts_connected_claims.members> members;
 
 	@javax.persistence.OneToMany(cascade = {javax.persistence.CascadeType.ALL}, fetch = javax.persistence.FetchType.EAGER)
-	@org.kie.api.definition.type.Label(value = "vehicles")
+	@org.kie.api.definition.type.Label("vehicles")
 	private java.util.List<com.myteam.tts_connected_claims.vehicles> vehicles;
+
+	@org.kie.api.definition.type.Label(value = "id")
+	private java.lang.String id;
+
+	@org.kie.api.definition.type.Label(value = "email")
+	private java.lang.String email;
+
+	@org.kie.api.definition.type.Label(value = "contactNumber")
+	private java.lang.String contactNumber;
+
+	@org.kie.api.definition.type.Label(value = "dateOfBirth")
+	private java.lang.String dateOfBirth;
 
 	public policyDetails() {
 	}
@@ -104,13 +116,47 @@ public class policyDetails implements java.io.Serializable {
 		this.vehicles = vehicles;
 	}
 
+	public java.lang.String getId() {
+		return this.id;
+	}
+
+	public void setId(java.lang.String id) {
+		this.id = id;
+	}
+
+	public java.lang.String getEmail() {
+		return this.email;
+	}
+
+	public void setEmail(java.lang.String email) {
+		this.email = email;
+	}
+
+	public java.lang.String getContactNumber() {
+		return this.contactNumber;
+	}
+
+	public void setContactNumber(java.lang.String contactNumber) {
+		this.contactNumber = contactNumber;
+	}
+
+	public java.lang.String getDateOfBirth() {
+		return this.dateOfBirth;
+	}
+
+	public void setDateOfBirth(java.lang.String dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
 	public policyDetails(java.lang.String policyNumber,
 			java.lang.String policyBrand, java.lang.String policyStatus,
 			java.lang.String policyHolderFirstName,
 			java.lang.String policyHolderSurname,
 			java.lang.String policyHolderInitials,
 			java.util.List<com.myteam.tts_connected_claims.members> members,
-			java.util.List<com.myteam.tts_connected_claims.vehicles> vehicles) {
+			java.util.List<com.myteam.tts_connected_claims.vehicles> vehicles,
+			java.lang.String id, java.lang.String email,
+			java.lang.String contactNumber, java.lang.String dateOfBirth) {
 		this.policyNumber = policyNumber;
 		this.policyBrand = policyBrand;
 		this.policyStatus = policyStatus;
@@ -119,6 +165,10 @@ public class policyDetails implements java.io.Serializable {
 		this.policyHolderInitials = policyHolderInitials;
 		this.members = members;
 		this.vehicles = vehicles;
+		this.id = id;
+		this.email = email;
+		this.contactNumber = contactNumber;
+		this.dateOfBirth = dateOfBirth;
 	}
 
 }
